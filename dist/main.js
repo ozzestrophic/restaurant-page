@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"this is working!\");\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("console.log(\"this is working!\");\n\nfunction createContent() {\n  const content = document.querySelector(\"#content\");\n\n  content.classList.add(`grid`, `grid-rows-[30vh_minmax(65vh,1fr)_5vh]`);\n\n  function createHeader() {\n    const header = document.createElement(\"header\");\n    header.classList.add(\n      `text-white`,\n      `text-center`,\n      `gap-2`,\n      `bg-[url('../src/falafel.jpg')]`,\n      `bg-cover`,\n      `bg-center`\n    );\n\n    header.innerText = \"this is auto generated\";\n\n    return header;\n  }\n\n  content.appendChild(createHeader());\n}\n\ncreateContent();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 
