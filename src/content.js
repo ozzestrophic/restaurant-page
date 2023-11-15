@@ -48,6 +48,7 @@ function createHeader() {
 
 function createMidContent() {
   const midContent = document.createElement("div");
+  midContent.id = "mid";
   midContent.innerHTML = "This is inner";
 
   return midContent;
