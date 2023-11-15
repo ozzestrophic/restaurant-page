@@ -18,6 +18,7 @@ function createBtns(id, text, func) {
   btn.classList.add(
     `border-white`,
     `border`,
+    `text-white`,
     `rounded-md`,
     `p-4`,
     `hover:bg-slate-200`,

@@ -1,47 +1,25 @@
 import { createBtnsDiv } from "./buttons";
+import { createHome } from "./home";
 
 function createContent() {
   const content = document.querySelector("#content");
 
-  content.classList.add(`grid`, `grid-rows-[30vh_minmax(65vh,1fr)_5vh]`);
-
-  content.appendChild(createHeader());
-  content.appendChild(createMidContent());
-  content.appendChild(createFooter());
-}
-
-function createHeader() {
-  const header = document.createElement("header");
-  header.classList.add(
-    `text-white`,
-    `text-center`,
-    `gap-2`,
+  content.classList.add(
     `bg-[url('../src/falafel.jpg')]`,
     `bg-cover`,
     `bg-center`
   );
 
-  const headingsDiv = document.createElement("div");
-  headingsDiv.classList.add(
-    `flex`,
-    `flex-col`,
-    `place-content-center`,
-    `h-full`,
-    `backdrop-blur-sm`
-  );
+  content.appendChild(createHeader());
+  content.appendChild(createMidContent());
+  createHome();
+  content.appendChild(createFooter());
+}
 
-  const h1 = document.createElement("h1");
-  h1.classList.add(`text-5xl`, `font-bold`, `font-serif`);
-  h1.innerText = `Welcome to Flafelo's`;
+function createHeader() {
+  const header = document.createElement("header");
 
-  const p = document.createElement("p");
-  p.innerText = "This is my new awesome restaurant";
-
-  headingsDiv.appendChild(h1);
-  headingsDiv.appendChild(p);
-  headingsDiv.appendChild(createBtnsDiv());
-
-  header.appendChild(headingsDiv);
+  header.appendChild(createBtnsDiv());
 
   return header;
 }
@@ -49,7 +27,6 @@ function createHeader() {
 function createMidContent() {
   const midContent = document.createElement("div");
   midContent.id = "mid";
-  midContent.innerHTML = "This is inner";
 
   return midContent;
 }
